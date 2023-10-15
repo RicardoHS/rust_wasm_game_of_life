@@ -4,5 +4,4 @@ build:
 	npm install
 
 run:
-	cd www
-	npm run start
+	npm run start --prefix www
