@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game of Life - Rust + WASM</title>
+    <style>
+        * {
+          font-size: large;
+        }
+        body {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: whitesmoke;
+        }
+        button {
+            height:40px;
+        }
+        .buttonEmoji {
+            border: 0px;
+            background-color: transparent;
+        }
+        table {
+            text-align: center;
+        }
+        .tableBorder > td{
+            padding: 5px 20px!important;
+            border-top: 1px solid black!important;
+        }
+      </style>
+  </head>
+  <body>
+    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+
+    <table>
+        <tr><h1>Built with Rust + WebAssembly</h1></tr>
+        <tr>
+          <td>Ticks per second:</td>
+          <td>
+            <input type="range" id="fpsRange" min="1" max="120">
+            <input type="number" id="fpsIndicator" min="1" max="120">
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><button id="resetButton">Reset</button></td>
+          <td>
+            <button id="dracarysButton" class="buttonEmoji">🚮</button>
+            <button id="play-pause" class="buttonEmoji"></button>
+            <button id="nextTick" class="buttonEmoji">*️⃣</button>
+        </td>
+          <td><button id="randomButton">Random</button></td>
+        </tr>
+        <tr class="tableBorder">
+            <td>Space: Start/Stop</td>
+            <td>Ctrl+Click: Glider</td>
+            <td>Shift+Click: Pulsar</td>
+        </tr>
+      </table>
+      <p></p>
+    <canvas id="game-of-life-canvas"></canvas>
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>
