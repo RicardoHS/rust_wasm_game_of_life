@@ -1,7 +1,6 @@
 build:
 	wasm-pack build --release
-	cd www
-	npm install
+	npm install --prefix www
 
 run:
 	npm run start --prefix www
