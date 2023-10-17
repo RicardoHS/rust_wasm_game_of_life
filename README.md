@@ -4,4 +4,6 @@ Basically, I followed the [rustwasm tutorial](https://rustwasm.github.io/docs/bo
 
 ### Built
 
-Simply run `wasm-pack build --release` and open `www/index.html` using a live server (or disabling CORS).
+You will need cargo and npm installed.
+
+Simply run `make` to build and install deps. Run `make run` to execute a live server (check logs for url).
